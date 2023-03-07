@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/css/reset.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="scores">
+            <a id="highscores">View high scores</a>
+        </div>
+        <div id="timer" class="timer">
+            Time: 90;
+        </div>
+    </header>
+
+    <section id="start-selector" class="start-quiz">
+        <h1>Welcome to Coding Quiz Challenge!</h1>
+        <p>
+            You will have 90 seconds to answer a series of computer-science questions. Incorrect answers will penalize your remaining time by 15 seconds.
+            The quiz will end 
+        </p>
+        <div class="controls">
+            <button id="start-btn" class="start-btn">Start Quiz</button>
+        </div>
+    </section>
+
+    <section id="question-index" class="hide">
+        <h1 id="question">Questions</h1>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Choice 1</button>
+            <button class="btn">Choice 2</button>
+            <button class="btn">Choice 3</button>
+            <button class="btn">Choice 4</button>
+        </div>
+        <h2 id="check-answer" class="correct-wrong hide"></h2>
+        <div class="controls">
+            <button id="next-btn" class="next-btn hide">Next</button>
+        </div>
+    </section>
+
+    <section id="score-container" class="hide">
+        <form id="submit-form">
+            <h3 id="your-score"></h3>
+            <label id="initials-label">Enter initials for highscore:</label>
+            <input type="text" id="initials-field" maxlength="3" placeholder="Enter your initials" />
+            <button id="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <section id="highscores" class="highscores hide">
+        <div id="high-scores">
+            <h1 class="centered">Highscores</h1>
+            <div id="highscore" class="highscore highscore-list">
+            </div>
+            <div class="controls">
+                <button id="restart-btn">Restart Quiz</button>
+                <button id="clear-btn">Reset Scores</button>
+            </div>
+        </div>
+        
+    </section>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+</body>
+
+</html>
